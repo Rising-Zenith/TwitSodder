@@ -19,8 +19,6 @@ Follow Bot library. If not, see http://www.gnu.org/licenses/.
 
 Code only slightly modified by Programming for Marketers to allow for separate variable 
 storage.
-
-Ongoing modification by Benjamin Lawrence (@Thoriendal) for the TwitSodder project.
 """
 
 from twitter import Twitter, OAuth, TwitterHTTPError
@@ -109,7 +107,7 @@ def get_do_not_follow_list():
     return do_not_follow
 
 
-def auto_follow(q, count=100, result_type="recent"):
+def twitsod_suggest(q, count=100, result_type="recent"):
     """
         Follows anyone who tweets about a specific phrase (hashtag, word, etc.)
     """
@@ -137,7 +135,7 @@ def auto_follow(q, count=100, result_type="recent"):
                 quit()
 
 
-def auto_follow_followers_for_user(user_screen_name, count=100):
+def twitsod_suggest_followers_for_user(user_screen_name, count=100):
     """
         Follows the followers of a user
     """
@@ -156,7 +154,7 @@ def auto_follow_followers_for_user(user_screen_name, count=100):
         except TwitterHTTPError as e:
             print("error: %s" % (str(e)))
 
-def auto_follow_followers():
+def twitsod_suggest_followers():
     """
         Follows back everyone who's followed you
     """
