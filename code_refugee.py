@@ -1,2 +1,2 @@
-from twitsodder import auto_follow
-auto_follow("refugee", count=35)
+from twitsodder import suggest
+suggest("refugee", count=35)
