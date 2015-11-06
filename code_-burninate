@@ -1,0 +1,2 @@
+from twitter_follow_bot import auto_unfollow_nonfollowers
+auto_unfollow_nonfollowers()
